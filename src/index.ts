@@ -450,10 +450,10 @@ new Command()
   .option('-S, --ssl', 'Enable https')
   .option('-t, --timer <timer>', 'Check timer', '60')
   .option('--verbose', 'Verbose mode')
-  .action(args => {
+  .action((args: any) => {
     try {
       main(args)
-    } catch (err) {
+    } catch (err: any) {
       console.error(err.message)
       process.exit(1)
     }
